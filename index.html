@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Page Title</title>
+    <script src="fabric.min.js"></script>
+    <script src="rect.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+</head>
+
+<body>
+    <div id="portal"><canvas id="canvas"></canvas></div>
+    <script>
+        var canvas = create_canvas();
+        var rect = create_rect(canvas);
+
+        // rect.lockScalingX = true;
+        rect.lockMovementX = true;
+
+        canvas.add(rect);
+        constrain_object_move(canvas);
+    </script>
+</body>
+
+</html>
